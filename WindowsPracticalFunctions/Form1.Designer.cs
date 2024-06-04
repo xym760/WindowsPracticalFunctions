@@ -33,9 +33,12 @@
             this.chooseFolderButton = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.fileExtensionComboBox = new System.Windows.Forms.ComboBox();
-            this.confirmButton = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.appendingSuffixCheckBox = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnGenerateIco = new System.Windows.Forms.Button();
+            this.btnTopShow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -80,15 +83,15 @@
             this.fileExtensionComboBox.TabIndex = 4;
             this.fileExtensionComboBox.Text = "输入文件后缀名";
             // 
-            // confirmButton
+            // btnConfirm
             // 
-            this.confirmButton.Location = new System.Drawing.Point(25, 376);
-            this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(75, 23);
-            this.confirmButton.TabIndex = 5;
-            this.confirmButton.Text = "确认";
-            this.confirmButton.UseVisualStyleBackColor = true;
-            this.confirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
+            this.btnConfirm.Location = new System.Drawing.Point(25, 376);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirm.TabIndex = 5;
+            this.btnConfirm.Text = "确认";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.ConfirmButton_Click);
             // 
             // label2
             // 
@@ -111,14 +114,46 @@
             this.appendingSuffixCheckBox.UseVisualStyleBackColor = true;
             this.appendingSuffixCheckBox.CheckedChanged += new System.EventHandler(this.appendingSuffix_CheckedChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(830, 224);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnGenerateIco
+            // 
+            this.btnGenerateIco.Location = new System.Drawing.Point(25, 41);
+            this.btnGenerateIco.Name = "btnGenerateIco";
+            this.btnGenerateIco.Size = new System.Drawing.Size(87, 23);
+            this.btnGenerateIco.TabIndex = 10;
+            this.btnGenerateIco.Text = "生成ico图标";
+            this.btnGenerateIco.UseVisualStyleBackColor = true;
+            this.btnGenerateIco.Click += new System.EventHandler(this.btnGenerateIco_Click);
+            // 
+            // btnTopShow
+            // 
+            this.btnTopShow.Location = new System.Drawing.Point(25, 13);
+            this.btnTopShow.Name = "btnTopShow";
+            this.btnTopShow.Size = new System.Drawing.Size(75, 23);
+            this.btnTopShow.TabIndex = 11;
+            this.btnTopShow.Text = "置顶显示";
+            this.btnTopShow.UseVisualStyleBackColor = true;
+            this.btnTopShow.Click += new System.EventHandler(this.btnTopShow_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 407);
+            this.ClientSize = new System.Drawing.Size(824, 486);
+            this.Controls.Add(this.btnTopShow);
+            this.Controls.Add(this.btnGenerateIco);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.appendingSuffixCheckBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.confirmButton);
+            this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.fileExtensionComboBox);
             this.Controls.Add(this.chooseFolderButton);
             this.Controls.Add(this.folderPathTextBox);
@@ -137,9 +172,12 @@
         private System.Windows.Forms.Button chooseFolderButton;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.ComboBox fileExtensionComboBox;
-        private System.Windows.Forms.Button confirmButton;
+        private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox appendingSuffixCheckBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGenerateIco;
+        private System.Windows.Forms.Button btnTopShow;
     }
 }
 

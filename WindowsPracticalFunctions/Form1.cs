@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -135,6 +136,46 @@ namespace WindowsPracticalFunctions
         private void appendingSuffix_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGenerateIco_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap b = new Bitmap(ofd.FileName);
+                string oldExtension = Path.GetExtension(ofd.FileName);
+                string newFilePath = ofd.FileName.Substring(0, ofd.FileName.Length - oldExtension.Length) + ".ico";
+                CreateIcon(b, newFilePath);
+            }
+        }
+
+        /**
+         * 将图片转换为ico格式.
+         */
+        void CreateIcon(Bitmap bmp, string path)
+        {
+            Bitmap bm = new Bitmap(bmp, new Size(64, 64));
+            Icon icon = Icon.FromHandle(bm.GetHicon());
+            System.IO.Stream stream = new System.IO.FileStream(path, System.IO.FileMode.OpenOrCreate);
+            icon.Save(stream);
+            stream.Close();
+            MessageBox.Show("创建成功，生成的ico图标在" + path);
+        }
+
+        private void btnTopShow_Click(object sender, EventArgs e)
+        {
+            this.TopMost = !this.TopMost;
+            Button clickedButton = sender as Button;
+
+            if (this.TopMost)
+            {
+                clickedButton.BackColor = System.Drawing.Color.Gray;
+            }
+            else
+            {
+                clickedButton.BackColor = System.Drawing.SystemColors.Control;
+            }
         }
     }
 }
