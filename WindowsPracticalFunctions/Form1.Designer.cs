@@ -35,6 +35,7 @@
             this.fileExtensionComboBox = new System.Windows.Forms.ComboBox();
             this.confirmButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.appendingSuffixCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -99,11 +100,23 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "如下文件将被修改后缀名：";
             // 
+            // appendingSuffixCheckBox
+            // 
+            this.appendingSuffixCheckBox.AutoSize = true;
+            this.appendingSuffixCheckBox.Location = new System.Drawing.Point(355, 70);
+            this.appendingSuffixCheckBox.Name = "appendingSuffixCheckBox";
+            this.appendingSuffixCheckBox.Size = new System.Drawing.Size(84, 16);
+            this.appendingSuffixCheckBox.TabIndex = 8;
+            this.appendingSuffixCheckBox.Text = "附加后缀名";
+            this.appendingSuffixCheckBox.UseVisualStyleBackColor = true;
+            this.appendingSuffixCheckBox.CheckedChanged += new System.EventHandler(this.appendingSuffix_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 407);
+            this.Controls.Add(this.appendingSuffixCheckBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.confirmButton);
             this.Controls.Add(this.fileExtensionComboBox);
@@ -126,6 +139,7 @@
         private System.Windows.Forms.ComboBox fileExtensionComboBox;
         private System.Windows.Forms.Button confirmButton;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox appendingSuffixCheckBox;
     }
 }
 

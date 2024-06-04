@@ -22,7 +22,8 @@ namespace WindowsPracticalFunctions
         private void ChooseFolderButton_Click(object sender, EventArgs e)
         {
             DialogResult dr = this.folderBrowserDialog1.ShowDialog();
-            if (dr == DialogResult.OK) {
+            if (dr == DialogResult.OK)
+            {
                 string folderPath = this.folderBrowserDialog1.SelectedPath;
                 string[] filePaths = Directory.GetFiles(folderPath);
                 int fileCount = 0;
@@ -65,14 +66,15 @@ namespace WindowsPracticalFunctions
                 fileCount++;
                 if (fileCount > 1)
                 {
-                    dragFileText = dragFileText + filePath.Substring(filePath.LastIndexOf("\\") + 1)+"\r\n";
-                } else
-                {
-                    dragFileText = filePath.Substring(filePath.LastIndexOf("\\") + 1)+"\r\n";
+                    dragFileText = dragFileText + filePath.Substring(filePath.LastIndexOf("\\") + 1) + "\r\n";
                 }
-                
+                else
+                {
+                    dragFileText = filePath.Substring(filePath.LastIndexOf("\\") + 1) + "\r\n";
+                }
+
             }
-            this.folderPathTextBox.Text = dragFileText + "将修改"+fileCount+"个文件";
+            this.folderPathTextBox.Text = dragFileText + "将修改" + fileCount + "个文件";
         }
 
 
@@ -90,9 +92,10 @@ namespace WindowsPracticalFunctions
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
                 e.Effect = DragDropEffects.Copy;
-            } else
+            }
+            else
             {
-                e.Effect= DragDropEffects.None;
+                e.Effect = DragDropEffects.None;
             }
         }
 
@@ -107,17 +110,31 @@ namespace WindowsPracticalFunctions
             DialogResult dr = MessageBox.Show("确定要修改吗？", "修改扩展名", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                string newExtension = "."+this.fileExtensionComboBox.Text;
-                
+                string newExtension = "." + this.fileExtensionComboBox.Text;
+                bool appendingSuffix = this.appendingSuffixCheckBox.Checked;
+
                 foreach (string filePath in willModifyFilePathList)
                 {
                     string oldExtension = Path.GetExtension(filePath);
-                    string newFilePath = filePath.Substring(0,filePath.Length - oldExtension.Length)+ newExtension;
+                    string newFilePath;
+                    if (appendingSuffix)
+                    {
+                        newFilePath = filePath + newExtension;
+                    }
+                    else
+                    {
+                        newFilePath = filePath.Substring(0, filePath.Length - oldExtension.Length) + newExtension;
+                    }
                     File.Move(filePath, newFilePath);
                     newFilePathList.Add(newFilePath);
                 }
                 willModifyFilePathList = newFilePathList;
             }
+        }
+
+        private void appendingSuffix_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
