@@ -126,6 +126,11 @@ namespace WindowsPracticalFunctions
                     {
                         newFilePath = filePath.Substring(0, filePath.Length - oldExtension.Length) + newExtension;
                     }
+                    int a =newFilePath.Length;
+                    if (newFilePath.Length > 2)
+                    {
+                        
+                    }
                     File.Move(filePath, newFilePath);
                     newFilePathList.Add(newFilePath);
                 }
@@ -176,6 +181,19 @@ namespace WindowsPracticalFunctions
             {
                 clickedButton.BackColor = System.Drawing.SystemColors.Control;
             }
+        }
+
+        private void btnTimer_Click(object sender, EventArgs e)
+        {
+            // 实例化新窗体 TimerForm
+            TimerForm timerForm = new TimerForm();
+            // 显示新窗体（非模态窗口，可同时操作主窗体和新窗体）
+            timerForm.Show();
+        }
+
+        private void fileExtensionComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

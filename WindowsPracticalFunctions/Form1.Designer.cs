@@ -39,6 +39,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnGenerateIco = new System.Windows.Forms.Button();
             this.btnTopShow = new System.Windows.Forms.Button();
+            this.btnTimer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -82,6 +83,7 @@
             this.fileExtensionComboBox.Size = new System.Drawing.Size(121, 20);
             this.fileExtensionComboBox.TabIndex = 4;
             this.fileExtensionComboBox.Text = "输入文件后缀名";
+            this.fileExtensionComboBox.SelectedIndexChanged += new System.EventHandler(this.fileExtensionComboBox_SelectedIndexChanged);
             // 
             // btnConfirm
             // 
@@ -143,11 +145,22 @@
             this.btnTopShow.UseVisualStyleBackColor = true;
             this.btnTopShow.Click += new System.EventHandler(this.btnTopShow_Click);
             // 
+            // btnTimer
+            // 
+            this.btnTimer.Location = new System.Drawing.Point(25, 406);
+            this.btnTimer.Name = "btnTimer";
+            this.btnTimer.Size = new System.Drawing.Size(75, 23);
+            this.btnTimer.TabIndex = 12;
+            this.btnTimer.Text = "计时器";
+            this.btnTimer.UseVisualStyleBackColor = true;
+            this.btnTimer.Click += new System.EventHandler(this.btnTimer_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 486);
+            this.Controls.Add(this.btnTimer);
             this.Controls.Add(this.btnTopShow);
             this.Controls.Add(this.btnGenerateIco);
             this.Controls.Add(this.button1);
@@ -178,6 +191,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnGenerateIco;
         private System.Windows.Forms.Button btnTopShow;
+        private System.Windows.Forms.Button btnTimer;
     }
 }
 
