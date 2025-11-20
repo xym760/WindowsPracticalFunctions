@@ -41,6 +41,15 @@ namespace WindowsPracticalFunctions
             this.comboBoxTimeLimit = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnTopShow = new System.Windows.Forms.Button();
+            this.labelTotalTime = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelAheadTime = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelAverageTime = new System.Windows.Forms.Label();
+            this.comboBoxPages = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelTotalPages = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timerComponent
@@ -134,11 +143,103 @@ namespace WindowsPracticalFunctions
             this.btnTopShow.UseVisualStyleBackColor = true;
             this.btnTopShow.Click += new System.EventHandler(this.btnTopShow_Click);
             // 
+            // labelTotalTime
+            // 
+            this.labelTotalTime.AutoSize = true;
+            this.labelTotalTime.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelTotalTime.Location = new System.Drawing.Point(165, 9);
+            this.labelTotalTime.Name = "labelTotalTime";
+            this.labelTotalTime.Size = new System.Drawing.Size(89, 19);
+            this.labelTotalTime.TabIndex = 9;
+            this.labelTotalTime.Text = "00:00:00";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(116, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "总耗时：";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(280, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 12);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "领先：";
+            // 
+            // labelAheadTime
+            // 
+            this.labelAheadTime.AutoSize = true;
+            this.labelAheadTime.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelAheadTime.Location = new System.Drawing.Point(313, 9);
+            this.labelAheadTime.Name = "labelAheadTime";
+            this.labelAheadTime.Size = new System.Drawing.Size(89, 19);
+            this.labelAheadTime.TabIndex = 12;
+            this.labelAheadTime.Text = "00:00:00";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(478, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 12);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "平均时间：";
+            // 
+            // labelAverageTime
+            // 
+            this.labelAverageTime.AutoSize = true;
+            this.labelAverageTime.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelAverageTime.Location = new System.Drawing.Point(536, 9);
+            this.labelAverageTime.Name = "labelAverageTime";
+            this.labelAverageTime.Size = new System.Drawing.Size(76, 19);
+            this.labelAverageTime.TabIndex = 14;
+            this.labelAverageTime.Text = "分钟/页";
+            // 
+            // comboBoxPages
+            // 
+            this.comboBoxPages.FormattingEnabled = true;
+            this.comboBoxPages.Location = new System.Drawing.Point(491, 38);
+            this.comboBoxPages.Name = "comboBoxPages";
+            this.comboBoxPages.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxPages.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(618, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(17, 12);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "页";
+            // 
+            // labelTotalPages
+            // 
+            this.labelTotalPages.AutoSize = true;
+            this.labelTotalPages.Location = new System.Drawing.Point(410, 12);
+            this.labelTotalPages.Name = "labelTotalPages";
+            this.labelTotalPages.Size = new System.Drawing.Size(59, 12);
+            this.labelTotalPages.TabIndex = 17;
+            this.labelTotalPages.Text = "共完成0页";
+            // 
             // TimerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelTotalPages);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.comboBoxPages);
+            this.Controls.Add(this.labelAverageTime);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelAheadTime);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelTotalTime);
             this.Controls.Add(this.btnTopShow);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxTimeLimit);
@@ -165,5 +266,14 @@ namespace WindowsPracticalFunctions
         private Label label1;
         private ColumnHeader column;
         private Button btnTopShow;
+        private Label labelTotalTime;
+        private Label label2;
+        private Label label3;
+        private Label labelAheadTime;
+        private Label label4;
+        private Label labelAverageTime;
+        private ComboBox comboBoxPages;
+        private Label label5;
+        private Label labelTotalPages;
     }
 }

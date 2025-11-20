@@ -13,8 +13,14 @@ namespace WindowsPracticalFunctions
 {
     public partial class TimerForm : Form
     {
-        // 累计经过的毫秒数（核心变量）
+        // 累计经过的单次总毫秒数
         private int _elapsedMilliseconds = 0;
+        // 累计经过的总毫秒数
+        private int _elapsedTotalMilliseconds = 0;
+        // 领先的总毫秒数
+        private int _aheadTotalMilliseconds = 0;
+        // 完成总页数
+        private int _totalPages = 0;
         // 计时器是否运行中（可选，用于防重复点击）
         private bool _isRunning = false;
         // 是否处于暂停状态
@@ -29,6 +35,8 @@ namespace WindowsPracticalFunctions
             comboBoxTimeLimit.Items.Add("30");
             comboBoxTimeLimit.Items.Add("60");
             comboBoxTimeLimit.SelectedIndex = 0;
+            comboBoxPages.Items.Add("1");
+            comboBoxPages.SelectedIndex = 0;
         }
 
         private void timerComponent_Tick(object sender, EventArgs e)
@@ -36,7 +44,9 @@ namespace WindowsPracticalFunctions
             if (!_isPaused) // 仅在非暂停状态下累计时间
             {
                 _elapsedMilliseconds += timerComponent.Interval; // 累加间隔时长（100毫秒）
+                _elapsedTotalMilliseconds += timerComponent.Interval;
                 labelTime.Text = FormatTime(_elapsedMilliseconds); // 实时更新显示
+                labelTotalTime.Text = FormatTime(_elapsedTotalMilliseconds);
             }
         }
 
@@ -100,7 +110,26 @@ namespace WindowsPracticalFunctions
             {
                 item.ForeColor = Color.Green;
             }
-
+            // 单次领先秒数
+            int aheadSeconds = limitSeconds - totalSeconds;
+            // 更新总领先毫秒数
+            _aheadTotalMilliseconds += (aheadSeconds * 1000);
+            labelAheadTime.Text = FormatTime(_aheadTotalMilliseconds);
+            if (_aheadTotalMilliseconds < 0)
+            {
+                labelAheadTime.ForeColor = Color.Red;
+            }
+            else
+            {
+                labelAheadTime.ForeColor = Color.Green;
+            }
+            // 更新总页数
+            _totalPages += int.Parse(this.comboBoxPages.Text);
+            labelTotalPages.Text = "共完成" + _totalPages.ToString() + "页";
+            // 更新每页多少分钟
+            float tempTotalMinutes = _elapsedTotalMilliseconds / 1000f / 60f;
+            float averageMinutesPerPage = tempTotalMinutes / _totalPages;
+            labelAverageTime.Text = averageMinutesPerPage.ToString() + "分钟/页";
 
             // 2. 重置累计时间，从头开始计时（保持 Timer 运行，不暂停）
             _elapsedMilliseconds = 0;
