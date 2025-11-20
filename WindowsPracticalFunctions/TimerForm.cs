@@ -160,5 +160,20 @@ namespace WindowsPracticalFunctions
                 clickedButton.BackColor = System.Drawing.SystemColors.Control;
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTotalPages_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -69,15 +69,17 @@ namespace WindowsPracticalFunctions
             // labelTime
             // 
             this.labelTime.AutoSize = true;
-            this.labelTime.Location = new System.Drawing.Point(106, 41);
+            this.labelTime.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelTime.Location = new System.Drawing.Point(106, 39);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(53, 12);
+            this.labelTime.Size = new System.Drawing.Size(89, 19);
             this.labelTime.TabIndex = 2;
             this.labelTime.Text = "00:00:00";
+            this.labelTime.Click += new System.EventHandler(this.labelTime_Click);
             // 
             // btnFinish
             // 
-            this.btnFinish.Location = new System.Drawing.Point(165, 36);
+            this.btnFinish.Location = new System.Drawing.Point(213, 37);
             this.btnFinish.Name = "btnFinish";
             this.btnFinish.Size = new System.Drawing.Size(75, 23);
             this.btnFinish.TabIndex = 3;
@@ -87,7 +89,7 @@ namespace WindowsPracticalFunctions
             // 
             // btnPause
             // 
-            this.btnPause.Location = new System.Drawing.Point(246, 36);
+            this.btnPause.Location = new System.Drawing.Point(294, 37);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(75, 23);
             this.btnPause.TabIndex = 4;
@@ -117,17 +119,17 @@ namespace WindowsPracticalFunctions
             // comboBoxTimeLimit
             // 
             this.comboBoxTimeLimit.FormattingEnabled = true;
-            this.comboBoxTimeLimit.Location = new System.Drawing.Point(327, 38);
+            this.comboBoxTimeLimit.Location = new System.Drawing.Point(375, 39);
             this.comboBoxTimeLimit.Name = "comboBoxTimeLimit";
-            this.comboBoxTimeLimit.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxTimeLimit.Size = new System.Drawing.Size(101, 20);
             this.comboBoxTimeLimit.TabIndex = 6;
-            this.comboBoxTimeLimit.Text = "时间限制（分钟）";
+            this.comboBoxTimeLimit.Text = "时间限制";
             this.comboBoxTimeLimit.SelectedIndexChanged += new System.EventHandler(this.comboBoxTimeLimit_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(455, 41);
+            this.label1.Location = new System.Drawing.Point(482, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 7;
@@ -146,17 +148,17 @@ namespace WindowsPracticalFunctions
             // labelTotalTime
             // 
             this.labelTotalTime.AutoSize = true;
-            this.labelTotalTime.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelTotalTime.Location = new System.Drawing.Point(165, 9);
+            this.labelTotalTime.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelTotalTime.Location = new System.Drawing.Point(152, 12);
             this.labelTotalTime.Name = "labelTotalTime";
-            this.labelTotalTime.Size = new System.Drawing.Size(89, 19);
+            this.labelTotalTime.Size = new System.Drawing.Size(53, 12);
             this.labelTotalTime.TabIndex = 9;
             this.labelTotalTime.Text = "00:00:00";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(116, 12);
+            this.label2.Location = new System.Drawing.Point(106, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 10;
@@ -165,7 +167,7 @@ namespace WindowsPracticalFunctions
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(280, 12);
+            this.label3.Location = new System.Drawing.Point(211, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 11;
@@ -175,7 +177,7 @@ namespace WindowsPracticalFunctions
             // 
             this.labelAheadTime.AutoSize = true;
             this.labelAheadTime.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelAheadTime.Location = new System.Drawing.Point(313, 9);
+            this.labelAheadTime.Location = new System.Drawing.Point(258, 9);
             this.labelAheadTime.Name = "labelAheadTime";
             this.labelAheadTime.Size = new System.Drawing.Size(89, 19);
             this.labelAheadTime.TabIndex = 12;
@@ -184,17 +186,18 @@ namespace WindowsPracticalFunctions
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(478, 12);
+            this.label4.Location = new System.Drawing.Point(503, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 12);
             this.label4.TabIndex = 13;
             this.label4.Text = "平均时间：";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // labelAverageTime
             // 
             this.labelAverageTime.AutoSize = true;
             this.labelAverageTime.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelAverageTime.Location = new System.Drawing.Point(536, 9);
+            this.labelAverageTime.Location = new System.Drawing.Point(562, 11);
             this.labelAverageTime.Name = "labelAverageTime";
             this.labelAverageTime.Size = new System.Drawing.Size(76, 19);
             this.labelAverageTime.TabIndex = 14;
@@ -203,15 +206,15 @@ namespace WindowsPracticalFunctions
             // comboBoxPages
             // 
             this.comboBoxPages.FormattingEnabled = true;
-            this.comboBoxPages.Location = new System.Drawing.Point(491, 38);
+            this.comboBoxPages.Location = new System.Drawing.Point(539, 39);
             this.comboBoxPages.Name = "comboBoxPages";
-            this.comboBoxPages.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxPages.Size = new System.Drawing.Size(66, 20);
             this.comboBoxPages.TabIndex = 15;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(618, 41);
+            this.label5.Location = new System.Drawing.Point(611, 41);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(17, 12);
             this.label5.TabIndex = 16;
@@ -220,11 +223,13 @@ namespace WindowsPracticalFunctions
             // labelTotalPages
             // 
             this.labelTotalPages.AutoSize = true;
-            this.labelTotalPages.Location = new System.Drawing.Point(410, 12);
+            this.labelTotalPages.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelTotalPages.Location = new System.Drawing.Point(371, 9);
             this.labelTotalPages.Name = "labelTotalPages";
-            this.labelTotalPages.Size = new System.Drawing.Size(59, 12);
+            this.labelTotalPages.Size = new System.Drawing.Size(105, 21);
             this.labelTotalPages.TabIndex = 17;
             this.labelTotalPages.Text = "共完成0页";
+            this.labelTotalPages.Click += new System.EventHandler(this.labelTotalPages_Click);
             // 
             // TimerForm
             // 
