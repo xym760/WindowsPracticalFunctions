@@ -54,6 +54,7 @@ namespace WindowsPracticalFunctions
             // 
             // timerComponent
             // 
+            this.timerComponent.Interval = 200;
             this.timerComponent.Tick += new System.EventHandler(this.timerComponent_Tick);
             // 
             // btnStart
@@ -255,6 +256,7 @@ namespace WindowsPracticalFunctions
             this.Controls.Add(this.btnStart);
             this.Name = "TimerForm";
             this.Text = "计时器";
+            this.Load += new System.EventHandler(this.TimerForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
