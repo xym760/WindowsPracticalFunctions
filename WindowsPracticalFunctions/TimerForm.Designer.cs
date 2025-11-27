@@ -50,6 +50,7 @@ namespace WindowsPracticalFunctions
             this.comboBoxPages = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.labelTotalPages = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timerComponent
@@ -59,7 +60,7 @@ namespace WindowsPracticalFunctions
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(25, 36);
+            this.btnStart.Location = new System.Drawing.Point(25, 12);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 1;
@@ -71,7 +72,7 @@ namespace WindowsPracticalFunctions
             // 
             this.labelTime.AutoSize = true;
             this.labelTime.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelTime.Location = new System.Drawing.Point(106, 39);
+            this.labelTime.Location = new System.Drawing.Point(410, 75);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(89, 19);
             this.labelTime.TabIndex = 2;
@@ -80,7 +81,7 @@ namespace WindowsPracticalFunctions
             // 
             // btnFinish
             // 
-            this.btnFinish.Location = new System.Drawing.Point(213, 37);
+            this.btnFinish.Location = new System.Drawing.Point(106, 12);
             this.btnFinish.Name = "btnFinish";
             this.btnFinish.Size = new System.Drawing.Size(75, 23);
             this.btnFinish.TabIndex = 3;
@@ -90,7 +91,7 @@ namespace WindowsPracticalFunctions
             // 
             // btnPause
             // 
-            this.btnPause.Location = new System.Drawing.Point(294, 37);
+            this.btnPause.Location = new System.Drawing.Point(187, 12);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(75, 23);
             this.btnPause.TabIndex = 4;
@@ -104,9 +105,9 @@ namespace WindowsPracticalFunctions
             this.column});
             this.listViewRecords.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.listViewRecords.HideSelection = false;
-            this.listViewRecords.Location = new System.Drawing.Point(25, 66);
+            this.listViewRecords.Location = new System.Drawing.Point(25, 47);
             this.listViewRecords.Name = "listViewRecords";
-            this.listViewRecords.Size = new System.Drawing.Size(562, 372);
+            this.listViewRecords.Size = new System.Drawing.Size(306, 372);
             this.listViewRecords.TabIndex = 5;
             this.listViewRecords.UseCompatibleStateImageBehavior = false;
             this.listViewRecords.View = System.Windows.Forms.View.Details;
@@ -120,7 +121,7 @@ namespace WindowsPracticalFunctions
             // comboBoxTimeLimit
             // 
             this.comboBoxTimeLimit.FormattingEnabled = true;
-            this.comboBoxTimeLimit.Location = new System.Drawing.Point(375, 39);
+            this.comboBoxTimeLimit.Location = new System.Drawing.Point(268, 14);
             this.comboBoxTimeLimit.Name = "comboBoxTimeLimit";
             this.comboBoxTimeLimit.Size = new System.Drawing.Size(101, 20);
             this.comboBoxTimeLimit.TabIndex = 6;
@@ -130,7 +131,7 @@ namespace WindowsPracticalFunctions
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(482, 42);
+            this.label1.Location = new System.Drawing.Point(375, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 7;
@@ -138,7 +139,7 @@ namespace WindowsPracticalFunctions
             // 
             // btnTopShow
             // 
-            this.btnTopShow.Location = new System.Drawing.Point(25, 7);
+            this.btnTopShow.Location = new System.Drawing.Point(505, 12);
             this.btnTopShow.Name = "btnTopShow";
             this.btnTopShow.Size = new System.Drawing.Size(75, 23);
             this.btnTopShow.TabIndex = 8;
@@ -149,17 +150,17 @@ namespace WindowsPracticalFunctions
             // labelTotalTime
             // 
             this.labelTotalTime.AutoSize = true;
-            this.labelTotalTime.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelTotalTime.Location = new System.Drawing.Point(152, 12);
+            this.labelTotalTime.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelTotalTime.Location = new System.Drawing.Point(410, 129);
             this.labelTotalTime.Name = "labelTotalTime";
-            this.labelTotalTime.Size = new System.Drawing.Size(53, 12);
+            this.labelTotalTime.Size = new System.Drawing.Size(89, 19);
             this.labelTotalTime.TabIndex = 9;
             this.labelTotalTime.Text = "00:00:00";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(106, 12);
+            this.label2.Location = new System.Drawing.Point(339, 135);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 10;
@@ -168,7 +169,7 @@ namespace WindowsPracticalFunctions
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(211, 12);
+            this.label3.Location = new System.Drawing.Point(339, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 11;
@@ -178,7 +179,7 @@ namespace WindowsPracticalFunctions
             // 
             this.labelAheadTime.AutoSize = true;
             this.labelAheadTime.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelAheadTime.Location = new System.Drawing.Point(258, 9);
+            this.labelAheadTime.Location = new System.Drawing.Point(410, 102);
             this.labelAheadTime.Name = "labelAheadTime";
             this.labelAheadTime.Size = new System.Drawing.Size(89, 19);
             this.labelAheadTime.TabIndex = 12;
@@ -187,7 +188,7 @@ namespace WindowsPracticalFunctions
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(503, 15);
+            this.label4.Location = new System.Drawing.Point(339, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 12);
             this.label4.TabIndex = 13;
@@ -198,7 +199,7 @@ namespace WindowsPracticalFunctions
             // 
             this.labelAverageTime.AutoSize = true;
             this.labelAverageTime.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelAverageTime.Location = new System.Drawing.Point(562, 11);
+            this.labelAverageTime.Location = new System.Drawing.Point(410, 155);
             this.labelAverageTime.Name = "labelAverageTime";
             this.labelAverageTime.Size = new System.Drawing.Size(76, 19);
             this.labelAverageTime.TabIndex = 14;
@@ -207,7 +208,7 @@ namespace WindowsPracticalFunctions
             // comboBoxPages
             // 
             this.comboBoxPages.FormattingEnabled = true;
-            this.comboBoxPages.Location = new System.Drawing.Point(539, 39);
+            this.comboBoxPages.Location = new System.Drawing.Point(410, 14);
             this.comboBoxPages.Name = "comboBoxPages";
             this.comboBoxPages.Size = new System.Drawing.Size(66, 20);
             this.comboBoxPages.TabIndex = 15;
@@ -215,28 +216,39 @@ namespace WindowsPracticalFunctions
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(611, 41);
+            this.label5.Location = new System.Drawing.Point(482, 17);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(17, 12);
             this.label5.TabIndex = 16;
             this.label5.Text = "页";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // labelTotalPages
             // 
             this.labelTotalPages.AutoSize = true;
             this.labelTotalPages.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelTotalPages.Location = new System.Drawing.Point(371, 9);
+            this.labelTotalPages.Location = new System.Drawing.Point(337, 47);
             this.labelTotalPages.Name = "labelTotalPages";
             this.labelTotalPages.Size = new System.Drawing.Size(105, 21);
             this.labelTotalPages.TabIndex = 17;
             this.labelTotalPages.Text = "共完成0页";
             this.labelTotalPages.Click += new System.EventHandler(this.labelTotalPages_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(339, 81);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 12);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "单次耗时：";
+            // 
             // TimerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.labelTotalPages);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBoxPages);
@@ -282,5 +294,6 @@ namespace WindowsPracticalFunctions
         private ComboBox comboBoxPages;
         private Label label5;
         private Label labelTotalPages;
+        private Label label6;
     }
 }
